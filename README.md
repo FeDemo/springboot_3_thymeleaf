@@ -5,11 +5,11 @@ springboot推荐的thymeleaf模板demo
 >pom.xml   
 
 ```xml
-		<!--引入thymeleaf-->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-thymeleaf</artifactId>
-		</dependency>
+<!--引入thymeleaf-->
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-thymeleaf</artifactId>
+</dependency>
 ```
 ## thymeleaf配置
 
@@ -43,12 +43,9 @@ spring.thymeleaf.cache=false
 ## Controller
 
 ``` java
-	@RequestMapping("/{name}")
-	String index(@PathVariable("name") String name, Model model){
-		model.addAttribute("name", name);
-		return "index";
-	}
-```
-```xml
-
+@RequestMapping("/{name}")
+String index(@PathVariable("name") String name, Model model){
+    model.addAttribute("name", name);
+    return "index";
+}
 ```
